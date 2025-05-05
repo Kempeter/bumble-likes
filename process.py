@@ -1,7 +1,7 @@
 import json
-import time
-import sys
 import os
+import sys
+import time
 
 import requests
 
@@ -26,6 +26,7 @@ def get_encounters():
     
 
 def process(data, download: bool, headers: dict[str, str]):
+
     for index, user in enumerate(data["body"][0]["client_encounters"]["results"]):
         user_id = user["user"]["user_id"]
 
@@ -51,22 +52,26 @@ def process(data, download: bool, headers: dict[str, str]):
             print(f"\t{i}: {str(about[i]).replace("\n", " ")}")
 
 
-        #w rite infos to file
-        profile_saved = []
-        with open("profile_saved.txt", "r", encoding="utf-8") as f:
-            profile_saved = [line.strip() for line in f.readlines()]
+        # write infos to file
+        saved_profiles = []
+        try:
+            with open("saved_profiles.txt", "r", encoding="utf-8") as f:
+                saved_profiles = [line.strip() for line in f.readlines()]
+        except OSError:
+            pass
         
-        if user_id not in profile_saved:
+        if user_id not in saved_profiles:
             print("Profile is saved")
             info = str()
             info += f"{liked} {name}, {age}\n"
             for i in about.keys():
                 info += f"\t{i}: {str(about[i]).replace("\n", " ")}\n"
             
+
             with open("profiles.txt", "a", encoding="utf-8") as f:
                 f.write(info + "\n")
 
-            with open("profile_saved.txt", "a", encoding="utf-8") as f:
+            with open("saved_profiles.txt", "a", encoding="utf-8") as f:
                 f.write(user_id + "\n")
 
         else:
@@ -74,8 +79,11 @@ def process(data, download: bool, headers: dict[str, str]):
 
         success = True
         saved = []
-        with open("saved.txt", "r", encoding="utf-8") as f:
-            saved = [i.strip() for i in f.readlines()]
+        try: 
+            with open("saved.txt", "r", encoding="utf-8") as f:
+                saved = [i.strip() for i in f.readlines()]
+        except OSError:
+            pass
 
         if download and user_id not in saved:
             for index, i in enumerate(photos):
