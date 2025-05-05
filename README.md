@@ -56,5 +56,6 @@ pip install -r requirements.txt
   * Chrome ```Ctrl + Shift + C```
   * Firefox ```Ctrl + Shift + I```
   * Opera ```Ctrl + Shift + H```
-
+4. Go to the network tab
+5. Enter ```encounters``` to the search bar
 
