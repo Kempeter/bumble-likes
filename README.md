@@ -52,10 +52,11 @@ pip install -r requirements.txt
 ## Usage
 1.  First of all, you have to create a Bumble account
 2.  Login on a browser like Chrome, Firefox, Opera etc.
-3.  Open the developer tools with
+3.  Open the developer tools
   * Chrome ```Ctrl + Shift + C```
   * Firefox ```Ctrl + Shift + I```
   * Opera ```Ctrl + Shift + H```
 4. Go to the network tab
-5. Enter ```encounters``` to the search bar
+5. Enter ```encounters``` to the search bar. You need the ```mwebapi.phtml?SERVER_GET_ENCOUNTERS``` <br><br> <img src="project_images/network1.png" style="margin-left:40px">
+6. Copy the response and paste it to ```encounters.json```
 
