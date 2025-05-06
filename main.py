@@ -3,9 +3,9 @@ from process import get_encounters, process, load_configs
 
 def main():
     # download the images or not
-    download = True
     data = get_encounters()
     configs = load_configs("config.json")
+    download = configs["download"]
     headers = {}
     headers["User-Agent"] = configs["User-Agent"]
 
