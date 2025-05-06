@@ -32,10 +32,23 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-I used Bumble for a while and became curious about who liked me. I discovered Bumble Web and realized I could access the right data.<br><br>
-The green dot (🟢) means, that the user liked you.<br>
-The program will download the users pictures automatically.<br>
-Example:
+I used Bumble for a while and became curious about who liked me. That’s when I discovered **Bumble Web** and realized I could access the right data.<br>
+
+You can find all the useful information in the API request:<br>
+```mwebapi.phtml?SERVER_GET_ENCOUNTERS```<br>
+
+Specifically, look under:<br>
+```["body"][0]["client_encounters"]["results"]```<br>
+
+The first and most important field is:<br>
+```has_user_voted```<br>
+
+This value indicates whether the user has liked you. 🙂<br>
+Other informations such as ```age```, ```name```, ```location```, ```user_id```, ```photos``` etc., can also be found in the ```["results"]``` list.
+<br><br>
+🟢 A green dot next to a profile means the user has liked you.<br>
+The program will automatically download the users' photos.<br>
+**Example:**
 <table border-collapse: collapse>
   <tbody>
   <tr>
