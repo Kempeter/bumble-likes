@@ -27,7 +27,48 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-I used Bumble for a while and became curious about who liked me. I discovered Bumble Web and realized I could access the right data.
+I used Bumble for a while and became curious about who liked me. I discovered Bumble Web and realized I could access the right data.<br>
+Example:
+<table border-collapse: collapse>
+  <tbody>
+  <tr>
+    <td>
+      <pre>
+<code>🟢 Laura, 22
+    Occupation: Studentin at TU Wien
+    Location: Vienna ~5 km away
+    About me: I love programming
+    Height: 170 cm
+    Exercise: Sometimes
+    Education level: Studying my undergrad
+    Drinking: Socially
+    Smoking: Never
+    Gender: Woman
+    Looking for: Relationship
+    Kids: Want someday
+    Star sign: Scorpio
+    Politics: Middle</code></pre>
+    </td>
+    <td>
+      <pre>
+<code>🔴 Klara, 25
+    Occupation: Studentin at Uni Wien
+    Location: Vienna ~10 km away
+    About me: I love running
+    Height: 175 cm
+    Exercise: Active
+    Education level: Studying my undergrad
+    Drinking: Never
+    Smoking: Never
+    Gender: Woman
+    Looking for: Relationship
+    Kids: Want someday
+    Star sign: Taurus
+    Religion: Christian</code></pre>
+    </td>
+  </tr>
+  </tbody>
+</table>
 
 
 <!-- GETTING STARTED -->
