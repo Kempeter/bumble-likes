@@ -18,7 +18,12 @@
     <li>
       <a href="#getting-started">Getting Started</a>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li>
+      <a href="#usage">Usage</a>
+    </li>
+    <li>
+      <a href="#output-files">Output files</a>
+    </li>
   </ol>
 </details>
 
@@ -27,7 +32,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-I used Bumble for a while and became curious about who liked me. I discovered Bumble Web and realized I could access the right data.<br>
+I used Bumble for a while and became curious about who liked me. I discovered Bumble Web and realized I could access the right data.<br><br>
+The green dot (🟢) means, that the user liked you.<br>
+The program will download the users pictures automatically.<br>
 Example:
 <table border-collapse: collapse>
   <tbody>
@@ -48,9 +55,9 @@ Example:
     Kids: Want someday
     Star sign: Scorpio
     Politics: Middle</code></pre>
-    </td>
+  </td>
     <td>
-      <pre>
+<pre>
 <code>🔴 Klara, 25
     Occupation: Studentin at Uni Wien
     Location: Vienna ~10 km away
@@ -74,7 +81,7 @@ Example:
 <!-- GETTING STARTED -->
 ## Getting Started
 
-You need only Python and Requests to use this project<br>
+You need Python 3 and Requests to use this project<br>
 And a Bumble account :)
 
 ## Installation 
@@ -91,13 +98,30 @@ pip install -r requirements.txt
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-1.  First of all, you have to create a Bumble account
-2.  Login on a browser like Chrome, Firefox, Opera etc.
-3.  Open the developer tools
+1.  Create a Bumble account.
+2.  Log in using a web browser such as Chrome, Firefox, or Opera.
+3.  Open Developer Tools:
   * Chrome ```Ctrl + Shift + C```
   * Firefox ```Ctrl + Shift + I```
   * Opera ```Ctrl + Shift + H```
-4. Go to the network tab
-5. Enter ```encounters``` to the search bar. You need the ```mwebapi.phtml?SERVER_GET_ENCOUNTERS``` <br><br> <img src="project_images/network1.png" style="margin-left:40px">
-6. Copy the response and paste it to ```encounters.json```
+4. Navigate to the Network tab.
+5. In the filter/search bar, enter ```encounters```.<br>
+Look for a request named:
+```mwebapi.phtml?SERVER_GET_ENCOUNTERS``` <br><br> <img src="project_images/network1.png" style="margin-left:40px">
+6. Copy the response body and paste it into a file named ```encounters.json```
+7. Open ```config.json``` and set your ```User-Agent``` string accordingly.
+8. You can set the ```download``` variable to ```true``` or ```false```:<br>
+* If ```true```, the program will download pictures from the selected profiles.
+9. Run the script by typing:
+```sh
+py main.py
+```
+10. Enjoy!
+
+## Output Files:
+```profiles.txt``` — Contains saved user profile information.<br>
+
+```saved_profiles.txt``` — Stores the IDs of profiles whose information was saved.<br>
+
+```saved.txt``` — Stores the IDs of profiles whose pictures were downloaded.
 
